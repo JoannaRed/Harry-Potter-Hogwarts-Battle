@@ -1,6 +1,7 @@
 package hp.hb;
 
 import java.awt.*;
+import static hp.hb.view.Display.*;
 
 public class Gameplay {
     private int position = 400;
@@ -12,12 +13,16 @@ public class Gameplay {
     public void render(Graphics graphics) {
         // prezentacja
         position++;
-        //graphics.drawLine(1,1,600,600);
-        graphics.drawRect(50,70, 500,400);
+
+        graphics.drawRect( getWidth(0.035), getHeight(0.1), getWidth(0.93),getHeight(0.5));
+        graphics.drawRect( getWidth(0.3), getHeight(0.7), getWidth(0.4),getHeight(0.2));
+
+
         //graphics.setColor(Color.YELLOW);
         //graphics.fillOval(position,100, 150,150);
 
     }
+
 }
 // Wyswietlic plansze
 // Wyswietlic gracza

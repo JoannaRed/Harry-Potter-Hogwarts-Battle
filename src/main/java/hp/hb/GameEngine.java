@@ -1,6 +1,8 @@
 package hp.hb;
 
 
+import hp.hb.view.Display;
+
 import java.awt.*;
 import java.awt.image.BufferStrategy;
 

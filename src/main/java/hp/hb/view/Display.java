@@ -1,4 +1,4 @@
-package hp.hb;
+package hp.hb.view;
 
 import javax.swing.*;
 import java.awt.*;
@@ -62,10 +62,15 @@ public final class Display {
         return height;
     }
 
+    public static int getHeight(double percent) {
+        return (int)(height*percent);
+    }
     public static int getWidth() {
         return width;
     }
-
+    public static int getWidth(double percent) {
+        return (int)(width*percent);
+    }
     public void addListener(MouseListener listener) {
         canvas.addMouseListener(listener);
     }
@@ -73,4 +78,6 @@ public final class Display {
     public void showGame() {
         frame.setVisible(true);
     }
+
+
 }
