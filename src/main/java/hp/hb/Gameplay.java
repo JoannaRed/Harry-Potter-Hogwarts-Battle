@@ -1,6 +1,10 @@
 package hp.hb;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.io.File;
+import java.io.IOException;
+
 import static hp.hb.view.Display.*;
 
 public class Gameplay {
@@ -14,9 +18,12 @@ public class Gameplay {
         // prezentacja
         position++;
 
-        graphics.drawRect( getWidth(0.035), getHeight(0.1), getWidth(0.93),getHeight(0.5));
-        graphics.drawRect( getWidth(0.3), getHeight(0.7), getWidth(0.4),getHeight(0.2));
-
+        graphics.drawRect( getWidth(0.035), getHeight(0.1), getWidth(0.25),getHeight(0.8));
+        try {
+           graphics.drawImage(ImageIO.read(Gameplay.class.getResource("/boardMini.jpg")),getWidth(0.3), getHeight(0.1), getWidth(0.6),getHeight(0.8),null );
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         //graphics.setColor(Color.YELLOW);
         //graphics.fillOval(position,100, 150,150);
@@ -24,7 +31,7 @@ public class Gameplay {
     }
 
 }
-// Wyswietlic plansze
+// Wyswietlic plansze *
 // Wyswietlic gracza
 // Na planszy : Wyswietlic prostokaty w miejscach gdzie beda grane elementy (przeciwnki, serca, talia nowych, talia granych )
 // Podmiana na grafiki
